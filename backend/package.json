@@ -1,0 +1,63 @@
+{
+  "name": "ignite-ecommerce-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Ignite Spiritual E-commerce",
+  "main": "dist/index.js",
+  
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "dev:backend": "nodemon src/index.ts",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "seed": "ts-node src/scripts/seedDatabase.ts",
+    "seed:reviews": "ts-node src/scripts/seedReviews.ts",
+    "reset-admin-password": "ts-node src/scripts/resetAdminpassword.ts",
+    "deploy": "npm run build && npm start"
+    
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.4",
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^1.41.0",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "razorpay": "^2.9.6",
+    "socket.io": "^4.7.5",
+    "stripe": "^14.9.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.10.0",
+    "@types/nodemailer": "^6.4.14",
+    "@types/supertest": "^2.0.16",
+    "@types/uuid": "^9.0.7",
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.1.4",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  }
+  
+}
+
+

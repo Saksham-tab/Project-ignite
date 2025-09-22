@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom breathing background animation */
+.breathing-bg {
+  background-color: #0b0b0b;
+  background-image: radial-gradient(circle at 40% 30%, rgba(0, 0, 0, 0.08) 0%, transparent 60%),
+                    radial-gradient(circle at 70% 70%, rgba(0, 0, 0, 0.06) 0%, transparent 60%),
+                    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.04) 0%, transparent 80%);
+  background-size: cover;
+  animation: breathingFog 12s ease-in-out infinite;
+}
+
+@keyframes breathingFog {
+  0% {
+    background-position: 40% 30%, 70% 70%, 50% 50%;
+  }
+  50% {
+    background-position: 42% 32%, 68% 68%, 52% 52%;
+  }
+  100% {
+    background-position: 40% 30%, 70% 70%, 50% 50%;
+  }
+}
+
+
+/* Enhanced glow effects */
+.animate-glow {
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 
+      0 0 5px #fe0101,
+      0 0 10px #fe0101,
+      0 0 15px #fe0101,
+      0 0 20px #fe0101;
+  }
+  50% {
+    text-shadow: 
+      0 0 10px #fe0101,
+      0 0 20px #fe0101,
+      0 0 30px #fe0101,
+      0 0 40px #fe0101;
+  }
+  100% {
+    text-shadow: 
+      0 0 5px #fe0101,
+      0 0 10px #fe0101,
+      0 0 15px #fe0101,
+      0 0 20px #fe0101;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fe0101;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7B1E1E;
+}
+
+/* Animation delay classes */
+.animate-delay-2s {
+  animation-delay: 2s;
+}
+
+.animate-delay-4s {
+  animation-delay: 4s;
+}
+
+.animate-delay-6s {
+  animation-delay: 6s;
+}
+
+/* Enhanced float animation for background symbols */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Additional responsive improvements */
+@media (max-width: 640px) {
+  .text-responsive-hero {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .text-responsive-hero {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+}
+
+/* Better button hover effects */
+.btn-ritual {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-ritual:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(254, 1, 1, 0.3),
+    0 0 20px rgba(254, 1, 1, 0.2);
+}
